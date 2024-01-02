@@ -10,8 +10,8 @@ website:
 
   navbar:
     right:
-      - icon: github
-        href: https://github.com/hyeonji07
+      - icon: type
+        value: table
 
   sidebar:
     style: "docked"
