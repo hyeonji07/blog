@@ -1,5 +1,5 @@
 ---
-title: "최종스 해피"
+title: "얼레벌레 공부벌레"
 listing:
   contents: posts
   sort: "date desc"
