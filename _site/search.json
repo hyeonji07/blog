@@ -7,11 +7,11 @@
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "어바웃",
+    "objectID": "posts/1주차.html",
+    "href": "posts/1주차.html",
+    "title": "blog_last",
     "section": "",
-    "text": "About this blog"
+    "text": "---\ntitle: \"my title\"\nauthor: \"전현지\"\ndate: \"01/02/2024\"\n---\n\n\n12+13\n\n25"
   },
   {
     "objectID": "index.html",
@@ -19,6 +19,13 @@
     "title": "최종스 해피",
     "section": "",
     "text": "Post With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nJan 2, 2024\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nDec 30, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "어바웃",
+    "section": "",
+    "text": "About this blog"
   },
   {
     "objectID": "posts/post-with-code/index.html",
