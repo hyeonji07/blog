@@ -3,22 +3,19 @@ project:
   output-dir: docs
 
 website:
-  title: "얼레벌레 공부벌레'blog"
+  title: "왜안돼"
 
   page-footer:
     border: true
 
   navbar:
-    left:
-      - text : 데이터 시각화
-        href : https://github.com/hyeonji07/Data_Visualization?tab=readme-ov-file
     right:
       - icon: github
-        href : https://github.com/hyeonji07
+        href: https://github.com/hyeonji07
 
-  sidebar :
-    style : "docked"
-    search : true
+  sidebar:
+    style: "docked"
+    search: true
     contents:
       - Memo.qmd
       - Baekjoon.qmd
