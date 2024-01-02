@@ -10,7 +10,7 @@ website:
 
   navbar:
     right:
-      - icon: type
+      - key: type
         value: table
 
   sidebar:
