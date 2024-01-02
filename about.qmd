@@ -1,5 +1,5 @@
 ---
-title: "About"
+title: "어바웃"
 image: profile.jpg
 about:
   template: jolla

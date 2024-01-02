@@ -1,5 +1,5 @@
 ---
-title: "blog_last"
+title: "최종스 해피"
 listing:
   contents: posts
   sort: "date desc"
