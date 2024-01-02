@@ -168,34 +168,50 @@ ul.task-list li input[type="checkbox"] {
 <li>가상 환경을 만들어주는 프로그램.</li>
 <li>본인이 원하는 환경 만들고 싶음 만들 수 있음.(ex : conda create –name &lt;가상환경이름&gt; python=3.8)</li>
 </ul>
-<p><code>-</code> <strong>[정리]</strong> - 컴퓨터 == 폴더 집합 -&gt; 가상환경 == 가상의 컴퓨터 == 폴더 - 아나콘다는 가상환경을 만들어주는 프로그램</p>
-<p><code>-</code> 그럼 가상환경 어디에 설치되어 있는데? - anaconda3 &gt; envs - 가상환경 폴더를 삭제 or 다른 경로로 이동하면? -&gt; 가상환경 사라지는거임 ㅇㅇ</p>
+<p><code>-</code> <strong>[정리]</strong><br>
+- 컴퓨터 == 폴더 집합<br>
+- 가상환경 == 가상의 컴퓨터 == 폴더<br>
+- 아나콘다는 가상환경을 만들어주는 프로그램</p>
+<p><code>-</code> 그럼 가상환경 어디에 설치되어 있는데?<br>
+- anaconda3 &gt; envs<br>
+- 가상환경 폴더를 삭제 or 다른 경로로 이동하면? -&gt; 가상환경 사라지는거임 ㅇㅇ</p>
 </section>
 </section>
 <section id="가상환경" class="level1">
 <h1>1. 가상환경</h1>
 <p><code>-</code> 그래서 왜 가상환경을 써야하는가? - <strong>패키지 충돌을 피하기 위함.</strong></p>
-<p><code>-</code> 패키지 충돌은 왜 발생하는데?</p>
-<ul>
-<li>오픈소스 -&gt; 누구나 본인이 만든 패키지 배포 가능<br>
-</li>
-<li>누군가가 배포한 A라는 패키지를 기반으로한 새로운 패키지(B) 만들 수 있음.<br>
-</li>
-<li>근데 A 패키지 버전이 업데이트되면서 기존에 있었던 함수가 사라지거나 달라진다면?<br>
-</li>
-<li>패키지 B가 작동하지 않을 수 있음 (이러한 의존 관계가 물리고 물려있다면? 대환장파티 ㅇㅇ) =&gt; 이것이 패키지 충돌임 ㅇㅅㅇ</li>
-</ul>
-<p><code>-</code> 그럼 어떻게 충돌을 피할 수 있는데? - 충돌이 안나는 패키지 버전 조합을 찾아주면됨.</p>
-<p><code>-</code> 그 조합 정보를 어디서 찾는데? - 아나콘다에서는 <strong>채널</strong> 이라고 부름 (채널에 패키지 버전 조합들이 잘 정리되어 있음.) - conda forge - r - pytorch 등이 있음. - 채널에 있는 정보를 사용해, 패키지B 충돌 안나게 설치하기 예시 : conda install -c python B - 별로인 채널도 있으니, 보장된 채널 사용 추천함</p>
-<p><code>-</code> 무튼 정리하자면 - base에 패키지 여러개 깔았는데, 충돌 발생 &amp; 돌이킬 수 없는 강을 건넜다? -&gt; 아나콘다 자체를 삭제하고 재설치 해야할 수도 있음.(그럼 패키지 설치 A to Z 다시해야 함.) - but, 가상환경을 사용했다면? 문제가 되는 가상환경만 삭제해주면, 다른건 괜찮은 거임.<br>
+<p><code>-</code> 패키지 충돌은 왜 발생하는데?<br>
+- 오픈소스 -&gt; 누구나 본인이 만든 패키지 배포 가능<br>
+- 누군가가 배포한 A라는 패키지를 기반으로한 새로운 패키지(B) 만들 수 있음.<br>
+- 근데 A 패키지 버전이 업데이트되면서 기존에 있었던 함수가 사라지거나 달라진다면?<br>
+- 패키지 B가 작동하지 않을 수 있음 (이러한 의존 관계가 물리고 물려있다면? 대환장파티 ㅇㅇ)<br>
+=&gt; 이것이 패키지 충돌임 ㅇㅅㅇ</p>
+<p><code>-</code> 그럼 어떻게 충돌을 피할 수 있는데?<br>
+- 충돌이 안나는 패키지 버전 조합을 찾아주면됨.</p>
+<p><code>-</code> 그 조합 정보를 어디서 찾는데?<br>
+- 아나콘다에서는 <strong>채널</strong> 이라고 부름 (채널에 패키지 버전 조합들이 잘 정리되어 있음.)<br>
+- conda forge<br>
+- r<br>
+- pytorch 등이 있음.<br>
+- 채널에 있는 정보를 사용해, 패키지B 충돌 안나게 설치하기<br>
+예시 : conda install -c python B<br>
+- 별로인 채널도 있으니, 보장된 채널 사용 추천함</p>
+<p><code>-</code> 무튼 정리하자면<br>
+- base에 패키지 여러개 깔았는데, 충돌 발생 &amp; 돌이킬 수 없는 강을 건넜다?<br>
+-&gt; 아나콘다 자체를 삭제하고 재설치 해야할 수도 있음.(그럼 패키지 설치 A to Z 다시해야 함.)<br>
+- but, 가상환경을 사용했다면?<br>
+문제가 되는 가상환경만 삭제해주면, 다른건 괜찮은 거임.<br>
 ex) 님이 만약 base에 A, B, numpy, pytorch, yolo 패키지를 깔았어 근데 패키지 충돌이 발생했다?<br>
 -&gt; 싹 날리고 재설치 해야할 수 있음<br>
 but, 가상환경으로 패키지 분리해서 설치되어있다?<br>
-그럼 문제되는 패키지가 있는 가상환경만 삭제해주면 됨.</p>
+-&gt; 그럼 문제되는 패키지가 있는 가상환경만 삭제해주면 됨.</p>
 </section>
 <section id="파이썬-개발환경" class="level1">
 <h1>2. 파이썬 개발환경</h1>
-<p><code>-</code> 파이썬 개발환경 구축방법이 많은 이유? - 1. 노트북 vs 노트북 가상환경 vs 원격 vs 클라우드 - 2. ipython, python, anaconda(파이썬 자동설치), 클라우드 - 3. IDE 종류 다양 (주피터, 스파이더, 파이참, atom, vscode 등)</p>
+<p><code>-</code> 파이썬 개발환경 구축방법이 많은 이유?<br>
+- 1. 노트북 vs 노트북 가상환경 vs 원격 vs 클라우드<br>
+- 2. ipython, python, anaconda(파이썬 자동설치), 클라우드<br>
+- 3. IDE 종류 다양 (주피터, 스파이더, 파이참, atom, vscode 등)</p>
 <p><code>-</code> <strong>[목적]</strong></p>
 <p>무튼 이렇게 다양한데, 이를 관통하는 원리를 살펴보자!</p>
 <section id="python-개발환경-발전-과정" class="level2">
@@ -234,8 +250,13 @@ but, 가상환경으로 패키지 분리해서 설치되어있다?<br>
 </ul>
 <p><code>-</code> 역할<br>
 - 메모장 == 코드 편집 &amp; 저장 - prompt == 계산기</p>
-<p><code>-</code> 실행방법 - 메모장 확장자를 .py로 변경 - prompt에서 해당 메모장이 저장된 경로로 이동 - 실행 : python 메모장이름.py</p>
-<p><code>-</code> 정리 - 마우스로 코드 편집 가능 &amp; 메모장(코드 편집기)가 저장되어 있음 == 코드가 저장되어 있음 - but, 단점 == 구문강조 x, 도움말 x</p>
+<p><code>-</code> 실행방법<br>
+- 메모장 확장자를 .py로 변경<br>
+- prompt에서 해당 메모장이 저장된 경로로 이동<br>
+- 실행 : python 메모장이름.py</p>
+<p><code>-</code> <strong>[정리]</strong><br>
+- 마우스로 코드 편집 가능 &amp; 메모장(코드 편집기)가 저장되어 있음 == 코드가 저장되어 있음<br>
+- but, 단점 == 구문강조 x, 도움말 x</p>
 </section>
 <section id="세대-2" class="level3">
 <h3 class="anchored" data-anchor-id="세대-2">3세대</h3>
@@ -245,21 +266,41 @@ but, 가상환경으로 패키지 분리해서 설치되어있다?<br>
 <li>%run 메모장 이름</li>
 </ul>
 <p><code>-</code> 메모장(코드 편집 &amp; 저장) 사용하는건 동일</p>
-<p><code>-</code> but, ipython 사용 - anaconda prompt처럼 코드 실행 및 결과 확인 기능 있어야함. - ipython 장점은 have -&gt; 구문강조 o , 도움말 o</p>
-<p><code>-</code> 어떻게 하냐? - ipython 실행 - !python 메모장이름.py</p>
-<p><code>-</code> 이게 어떻게 가능하냐? - !(느낌표)의 기능 주목 - !python 메모장이름.py - 원래 ipython 환경이었지만, 해당 내용을 새로운 prompt(ipython X)에서 해당 코드 내용을 실행하고 결괏값을 현재 anaconda 창에 띄워주는거임 - so, 변수는 공유되지 않음 (각각의 prompt는 독립적 &lt;1세대 설명 참고&gt;)</p>
-<p><code>-</code> 변수 공유 필요하다? - %run 메모장 이름 입력 - 얘는 메모장의 내용을, 현재 prompt 에 복붙하고, 결과만 출력하는 것과 같은 효과임</p>
+<p><code>-</code> but, ipython 사용<br>
+- anaconda prompt처럼 코드 실행 및 결과 확인 기능 있어야함.<br>
+- ipython 장점은 have -&gt; 구문강조 o , 도움말 o</p>
+<p><code>-</code> 어떻게 하냐?<br>
+- ipython 실행<br>
+- !python 메모장이름.py</p>
+<p><code>-</code> 이게 어떻게 가능하냐?<br>
+- !(느낌표)의 기능 주목<br>
+- !python 메모장이름.py<br>
+- 원래 ipython 환경이었지만, 해당 내용을 새로운 prompt(ipython X)에서 해당 코드 내용을 실행하고 결괏값을 현재 anaconda 창에 띄워주는거임<br>
+- so, 변수는 공유되지 않음 (각각의 prompt는 독립적 &lt;1세대 설명 참고&gt;)</p>
+<p><code>-</code> 변수 공유 필요하다?<br>
+- %run 메모장 이름 입력<br>
+- 얘는 메모장의 내용을, 현재 prompt 에 복붙하고, 결과만 출력하는 것과 같은 효과임</p>
 </section>
 <section id="세대-3" class="level3">
 <h3 class="anchored" data-anchor-id="세대-3">4세대</h3>
 <ul>
 <li>IDE(통합개발환경) == 메모장 + ipython 한방에~</li>
 </ul>
-<p><code>-</code> 주피터로 예를 들어 설명 (모든 IDE 같은 논리임) - 주피터는 그냥 입출력을 깔끔하게 보여주는 인터페이스임. - 계산은 ipython이 다함. - cell 하나가 하나의 메모장임. - cell의 내용을 ipython이 계산 &amp; 결괏값 출력 - 주피터가 그 결괏값을 복사 해와서 user한테 보여줌.<br>
+<p><code>-</code> 주피터로 예를 들어 설명 (모든 IDE 같은 논리임)<br>
+- 주피터는 그냥 입출력을 깔끔하게 보여주는 인터페이스임.<br>
+- 계산은 ipython이 다함.<br>
+- cell 하나가 하나의 메모장임.<br>
+- cell의 내용을 ipython이 계산 &amp; 결괏값 출력 - 주피터가 그 결괏값을 복사 해와서 user한테 보여줌.<br>
 =&gt; prompt는 하나니깐, 변수 공유 가능한. 메모장만 여러개인 거임.</p>
-<p><code>-</code> 커널 재시작 - prompt를 끄고 새창을 키는것과 같음</p>
-<p><code>-</code> 커널 정지?(무튼 네모 누르기) - prompt에서 ctrl + c 누르는 효과와 같음</p>
-<p><code>-</code> <strong>[정리]</strong> - IDE는 그냥 복붙해주는 인터페이스임, 연산 기능 x - 실제 연산은 python, or R이 다 함 - 때문에, IDE만 설치한다고 해서 연산을 수행할 수 x, 무조건 R이나 python을 먼저 설치하고 IDE를 실행할 수 있음 - 하나의 IDE가 여러 언어와 연결될 수 있음</p>
+<p><code>-</code> 커널 재시작<br>
+- prompt를 끄고 새창을 키는것과 같음</p>
+<p><code>-</code> 커널 정지?(무튼 네모 누르기)<br>
+- prompt에서 ctrl + c 누르는 효과와 같음</p>
+<p><code>-</code> <strong>[정리]</strong><br>
+- IDE는 그냥 복붙해주는 인터페이스임, 연산 기능 x<br>
+- 실제 연산은 python, or R이 다 함<br>
+- 때문에, IDE만 설치한다고 해서 연산을 수행할 수 x, 무조건 R이나 python을 먼저 설치하고 IDE를 실행할 수 있음<br>
+- 하나의 IDE가 여러 언어와 연결될 수 있음</p>
 </section>
 <section id="세대-가상컴퓨터anaconda-원격-컴퓨터server-클라우드-컴퓨터colab" class="level3">
 <h3 class="anchored" data-anchor-id="세대-가상컴퓨터anaconda-원격-컴퓨터server-클라우드-컴퓨터colab">5세대 : 가상컴퓨터(anaconda), 원격 컴퓨터(server), 클라우드 컴퓨터(colab)</h3>
@@ -272,12 +313,22 @@ but, 가상환경으로 패키지 분리해서 설치되어있다?<br>
 <ul>
 <li>ipython이 실행되는 컴퓨터와 크롬이 실행되는 컴퓨터가 동일하지 않아도 인터넷에만 연결되어 있으면 작동</li>
 </ul>
-<p><code>-</code> 방법1 : just 원격 컴퓨터 - 좋은 성능을 가진 컴퓨터를 여러명이 공유해서 사용하는 것. - 메모장 == 내 노트북 IDE - 실제 python or R이 실행되는 곳 == 원격 컴퓨터 prompt - 이제까지의 IDE 환경에서의 코드 작동 매커니즘과 같지만, python이 어디서 실행되는지만 다름 - 논리적 분리가 안되어있기 때문에, 누군가 돌이킬 수 없는 강을 건너면 서버를 공유하고 있는 모든 사람이 서버를 사용하지 못하게 될 수 있음</p>
-<p><code>-</code> 방법 2 : 원격컴퓨터 + 가상환경 - 서버를 논리적으로 나누기 (가상환경과 같음) - 코드를 실현하는 매커니즘은 방법1과 같음 - but, 가상환경과 같이, 분리가 되어있기 때문에 문제가 발생했을 경우, 다른 user에게 영향 x just 해당하는 환경만 삭제해주면됨.</p>
+<p><code>-</code> 방법1 : just 원격 컴퓨터<br>
+- 좋은 성능을 가진 컴퓨터를 여러명이 공유해서 사용하는 것.<br>
+- 메모장 == 내 노트북 IDE<br>
+- 실제 python or R이 실행되는 곳 == 원격 컴퓨터 prompt<br>
+- 이제까지의 IDE 환경에서의 코드 작동 매커니즘과 같지만, python이 어디서 실행되는지만 다름<br>
+- 논리적 분리가 안되어있기 때문에, 누군가 돌이킬 수 없는 강을 건너면 서버를 공유하고 있는 모든 사람이 서버를 사용하지 못하게 될 수 있음</p>
+<p><code>-</code> 방법 2 : 원격컴퓨터 + 가상환경<br>
+- 서버를 논리적으로 나누기 (가상환경과 같음)<br>
+- 코드를 실현하는 매커니즘은 방법1과 같음<br>
+- but, 가상환경과 같이 분리가 되어있기 때문에 문제가 발생했을 경우, 다른 user에게 영향 x just 해당하는 환경만 삭제해주면됨.</p>
 </section>
 <section id="클라우드-컴퓨터" class="level4">
 <h4 class="anchored" data-anchor-id="클라우드-컴퓨터">클라우드 컴퓨터</h4>
-<p><code>-</code> 클라우드 컴퓨터가 뭔데? - 성능이 그저그런 컴퓨터 여러개를 모아서, user에게 할당 - ex) m개의 컴퓨터를 n명의 user에게 할당 -&gt; 1인당 m/n 대 할당</p>
+<p><code>-</code> 클라우드 컴퓨터가 뭔데?<br>
+- 성능이 그저그런 컴퓨터 여러개를 모아서, user에게 할당<br>
+- ex) m개의 컴퓨터를 n명의 user에게 할당 -&gt; 1인당 m/n 대 할당</p>
 
 
 </section>
