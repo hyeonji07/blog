@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "왜안돼"
+  title: '얼레벌레 공부벌레'
 
   page-footer:
     border: true
