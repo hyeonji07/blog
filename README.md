@@ -1,2 +1,2 @@
-# blog_last
-제발 last
+# blog
+공부 내용 정리
