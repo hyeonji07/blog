@@ -1,23 +1,28 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "얼레벌레 공부벌레"
+
+  page-footer:
+    border: true
+
   navbar:
     left:
       - text : 데이터 시각화
         href : https://github.com/hyeonji07/Data_Visualization?tab=readme-ov-file
     right:
-      - about.qmd
       - icon: github
-        href: https://github.com/hyeonji07
-    sidebar :
-      style : "docked"
-      search : true
-      contents:
-        - Memo.qmd
-        - Baekjoon.qmd
-        - Data_ToolBox.qmd
+        href : https://github.com/hyeonji07
+
+  sidebar :
+    style : "docked"
+    search : true
+    contents:
+      - Memo.qmd
+      - Baekjoon.qmd
+      - Data_ToolBox.qmd
     
 format:
   html:
