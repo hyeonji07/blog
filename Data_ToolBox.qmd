@@ -2,7 +2,7 @@
 title: "Data_ToolBox"
 listing:
   contents: Data_ToolBox
-  sort:"date desc"
+  sort: "date desc"
   type: table
   categories: false
   sort-ui: false
