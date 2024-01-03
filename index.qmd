@@ -2,7 +2,6 @@
 listing:
   contents: [Memo,Baekjoon,Data_ToolBox]
   sort: [date desc,title]
-  type: table
   categories: false
   sort-ui: false
   filter-ui: true
