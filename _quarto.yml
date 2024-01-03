@@ -1,13 +1,10 @@
 project:
   type: website
-#  output-dir: docs
-
+  output-dir: docs
 website:
   title: "얼레벌레 공부벌레"
-
   page-footer:
     border: true
-
   sidebar:
     style: "docked"
     search: true
@@ -15,7 +12,6 @@ website:
       - Memo.qmd
       - Baekjoon.qmd
       - Data_ToolBox.qmd
-    
 format:
   html:
     theme: cosmo

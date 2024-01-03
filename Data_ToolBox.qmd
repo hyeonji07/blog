@@ -1,13 +1,13 @@
 ---
 title: "Data_ToolBox"
 listing:
-    contents: Data_ToolBox
-    sort:"date desc"
-    type: table
-    categories: false
-    sort-ui: false
-    filter-ui: false
-    page-size: 9999
-page-layout: full
+  contents: Data_ToolBox
+  sort:"date desc"
+  type: table
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  page-size: 9999
+pa-layout: full
 title-block-banner: false
 ---

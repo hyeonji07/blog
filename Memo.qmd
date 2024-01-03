@@ -1,13 +1,13 @@
 ---
 title: "Memo"
 listing:
-    contents: Memo
-    sort:"date desc"
-    type: table
-    categories: false
-    sort-ui: false
-    filter-ui: false
-    page-size: 9999
+  contents: Memo
+  sort:"date desc"
+  type: table
+  categories: false
+  sort-ui: false
+  filter-ui: false
+  page-size: 9999
 page-layout: full
 title-block-banner: false
 ---
